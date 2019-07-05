@@ -1,0 +1,11 @@
+
+
+<template name="like">
+    <view>
+        <view>
+          点赞模板
+        </view>
+        <view> who ---{{who}}</view>
+        <view>count ----{{count}}</view>
+    </view>
+</template>

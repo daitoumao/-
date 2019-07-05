@@ -1,47 +1,50 @@
 {
-  "pages": [
-    "pages/home/home",
-    "pages/index/index",
-    "pages/logs/logs",
-    
-    "pages/find/find",
-    "pages/my/my",
-    "pages/car/car"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#f00",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar":{
-    "color":"#fff",
-    "selectedColor":"#123456",
-    "backgroundColor":"#f0f",
-    "borderStyle":"black",
-    "list":[
-      {
-        "pagePath": "pages/home/home",
-        "text" : "首页",
-        "iconPath": "",
-        "selectedIconPath" :""
-      },{
-        "pagePath": "pages/find/find",
-        "text": "发现",
-        "iconPath": "",
-        "selectedIconPath": ""
-      },{
-        "pagePath": "pages/car/car",
-        "text": "购物车",
-        "iconPath": "",
-        "selectedIconPath": ""
-      },{
-        "pagePath": "pages/my/my",
-        "text": "个人",
-        "iconPath": "",
-        "selectedIconPath": ""
-      }
-    ]
-  },
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/find/find",
+        "pages/my/my",
+        "pages/home/home",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/car/car",
+        "pages/detail/detail"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f00",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#f00",
+        "selectedColor": "#0f0",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "./assets/images/home-off.png",
+                "selectedIconPath": "./assets/images/home-on.png"
+            },
+            {
+                "pagePath": "pages/find/find",
+                "text": "发现",
+                "iconPath": "./assets/images/find-off.png",
+                "selectedIconPath": "./assets/images/find-on.png"
+            },
+            {
+                "pagePath": "pages/car/car",
+                "text": "购物车",
+                "iconPath": "./assets/images/car-off.png",
+                "selectedIconPath": "./assets/images/car-on.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "个人",
+                "iconPath": "./assets/images/my-off.png",
+                "selectedIconPath": "./assets/images/my-on.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
 }

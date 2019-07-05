@@ -14,13 +14,13 @@ Page({
       id: 0,
       latitude: 23.0540551376, 
       longitude: 113.4130708748,
-      width: 10,
-      height: 20
+      width: 30,
+      height: 50
     }],
   },
   gotoHome(){
-    wx.navigateTo({
-      url: '../home/home?id=1901'
+    wx.switchTab({
+      url: '../home/home'
     })
   },
   

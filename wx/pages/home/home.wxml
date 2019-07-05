@@ -1,2 +1,62 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+
+
+<view>
+  <text>pages/home/home.wxml</text>
+  <view hidden="{{flag}}">
+    <text>home ==== {{msg}}</text>
+  </view>
+  <view>
+    {{flag?"true" :"false"}}
+  </view>
+  <view wx:if="{{flag}}">
+    <image src="{{src}}"></image>
+  </view>
+
+  <switch checked="{{flag}}" bindchange="changeFlag" />
+
+  <view wx:for="{{array}}" wx:key="{{index}}">
+    {{item.msg}} ----- {{index}}
+  </view>
+  <view wx:if="{{flag}}" wx:for="{{num}}" wx:for-item="i" wx:for-index="id" wx:key="{{id}}">
+    <view wx:for="{{num}}" wx:for-item="j" wx:for-index="jid" wx:key="{{jid}}">
+      <view wx:if="{{i<=j}}">
+        <view>
+          {{i}} * {{j}} == {{ i * j }}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view data-word="凉凉" bindtap="getsome"> 小程序事件绑定</view>
+  <input bindchange="getValue"></input>
+  <view class="box">rpx测试</view>
+  <view>
+      <button type="warn" bindtap="openModal">打开showmodal</button>
+  </view>
+  <view>
+    <button type='primary' bindtap='openaction'>showactionsheet</button>
+  </view>
+  <import src="../../tpls/like.wxml"/>
+  <template is="like" data="{{...likeData}}"/>
+
+  <template name="user">
+    <view>
+      <view>user---user</view>
+      <view>name ---{{name}}</view>
+      <view>age----{{age}}</view>
+    </view>
+  </template>
+  <template is="user" data="{{...user}}"/>
+
+  <import src="/tpls/actionsheet.wxml" />
+    <template is="actionsheet" data="{{ ...actionData   }}"/>
+        <view>
+      <button type="primary" bindtap="openMyAction">打开action sheet </button>
+    </view>
+
+    
+    <import src="/tpls/signin.wxml" />
+    <template is="signin" data="{{ ...modalData   }}"/>
+
+</view>

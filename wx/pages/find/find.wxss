@@ -1,1 +1,38 @@
 /* pages/find/find.wxss */
+
+
+.find {
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navs{
+  width:100%;
+  height:100rpx;
+  display: flex;
+}
+.navs-item {
+  flex:1;
+  height:98rpx;
+  border-bottom:2rpx solid #333   ;  
+  text-align: center;
+  line-height: 98rpx;
+  color:#333;
+  font-size:34rpx;
+}
+
+.navs .navs-active{
+ color:#1afa29;
+  border-bottom:2rpx solid #1afa29   ;
+}
+
+.main{
+  flex:1;
+}
+
+ .swiper , .swiper-item {
+   width:100%;
+   height:100%;
+ }

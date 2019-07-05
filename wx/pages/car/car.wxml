@@ -1,2 +1,13 @@
 <!--pages/car/car.wxml-->
-<text>pages/car/car.wxml</text>
+
+<view>
+
+  <text>pages/car/car.wxml</text>
+  <photo msg="wuhan1901"></photo>
+
+  <view>
+    <canvas style="width: 300px; height: 200px;" canvas-id="firstCanvas"></canvas>
+  </view>
+
+
+</view>

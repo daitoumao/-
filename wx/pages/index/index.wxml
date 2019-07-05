@@ -16,6 +16,6 @@
   <view>
     <button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}" bindtap="gotoHome">点我</button>
   </view>
-    <map id="map" longitude="113.4130708748" latitude="23.0540551376" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+  <map id="map" longitude="113.4130708748" latitude="23.0540551376" scale="14" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{true}}" bindregionchange="regionchange" show-location style="width: 100%; height: 500px;"  show-compass="true" enable-satellite></map>
 
 </view>

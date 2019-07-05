@@ -1,2 +1,36 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<!-- <view>
+  <text>个人---个人</text>
+</view> -->
+
+<view wx:if="{{show}}">
+  <progress percent="{{percent}}" show-info stroke-width="12" color="pink" />
+</view>
+<view wx:else>
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item.img}}" class="slide-image" style='width:100%; height:300px' />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+  <button type="primary" bindtap="audioPlay">播放</button>
+  <button type="primary" bindtap="audioPause">暂停</button>
+
+  <view class="section tc">
+  <video id="myVideo" 
+  style='width:100%' 
+  src="{{videosrc}}" 
+  danmu-list="{{danmuList}}" 
+  bindplay="videoplay"
+  bindtimeupdate="videoplaying"
+  enable-danmu danmu-btn controls></video>
+  <view class="btn-area">
+    <button type='primary' bindtap="bindButtonTap">获取视频</button>
+    <input bindblur="bindInputBlur"/>
+    <button  type='warn' bindtap="bindSendDanmu">发送弹幕</button>
+  </view>
+</view>
+</view>

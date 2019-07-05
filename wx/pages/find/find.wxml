@@ -1,2 +1,28 @@
 <!--pages/find/find.wxml-->
-<text>pages/find/find.wxml</text>
+
+<!-- 
+<movable-area style="height:200px; width: 100%; background: red;">
+  <movable-view style="height: 50px; width: 50px; background: blue;" direction="all">
+  </movable-view>
+</movable-area> -->
+
+<view class='find'>
+  <view class='navs'>
+    <view bindtap='changeCurrent' wx:for="{{navs}}" data-idx="{{index}}" wx:key="{{index}}" class="{{ current== index?'navs-item navs-active':'navs-item' }}">
+      {{item.text}}
+    </view>
+  </view>
+
+  <view class='main'>
+    <swiper 
+    class='swiper'
+    bindchange='changeSwiper'
+    current='{{current}}'
+    >
+      <swiper-item wx:for="{{navs}}" wx:key="{{i}}" wx:for-item="s" wx:for-index="i" class="swiper-item">
+        <goodsList item="{{s}}" goods="{{goods}}"></goodsList>
+      </swiper-item>
+    </swiper>
+  </view>
+
+</view>

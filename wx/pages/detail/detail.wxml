@@ -1,0 +1,9 @@
+<!--pages/detail/detail.wxml-->
+<!-- <text>pages/detail/detail.wxml</text> -->
+
+<view>
+    <view>
+        商品详情 ---{{goodid}}---- {{name}}
+    </view>
+
+</view>
